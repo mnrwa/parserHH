@@ -35,8 +35,8 @@ for page in range(max_page):
             company_tag = card.find('span', {'data-qa': 'vacancy-serp__vacancy-employer-text'})
             company = company_tag.get_text(strip=True) if company_tag else "Не указана"
                 
-            salary_tag = card.find('span', class_='magritte-text_style-primary___AQ7MW_3-0-33')
-            salary = salary_tag.get_text(strip=True) if salary_tag else "Не указана"
+            salary_tag = card.find('span', class_='magritte-text___pbpft_3-0-33 magritte-text_style-primary___AQ7MW_3-0-33 magritte-text_typography-label-1-regular___pi3R-_3-0-33')
+            salary = salary_tag.get_text(strip=True) if salary_tag else "Не указана"      
                 
             experience_tag = card.find('span', {'data-qa': 'vacancy-serp__vacancy-experience'})
             experience = experience_tag.get_text(strip=True) if experience_tag else "Не указан"
